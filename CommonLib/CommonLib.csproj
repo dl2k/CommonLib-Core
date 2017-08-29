@@ -1,7 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tester\**" />
+    <EmbeddedResource Remove="Tester\**" />
+    <None Remove="Tester\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.8-dmr" />
+    <PackageReference Include="mySqlSugarCore" Version="3.5.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="ServiceStack.Redis.Core" Version="1.0.43" />
+    <PackageReference Include="SSH.NET" Version="2016.1.0-beta2" />
+  </ItemGroup>
 
 </Project>
